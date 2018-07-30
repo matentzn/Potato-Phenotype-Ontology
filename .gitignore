@@ -5,3 +5,4 @@ src/ontology/potpo.obo
 src/ontology/potpo.owl
 semantic.cache
 bin/
+.DS_Store
