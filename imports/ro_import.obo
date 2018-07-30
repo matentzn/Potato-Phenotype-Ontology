@@ -27,6 +27,11 @@ def: "An occurrent that has temporal proper parts and for some time t, p s-depen
 is_a: BFO:0000003 ! occurrent
 
 [Term]
+id: BFO:0000019
+name: quality
+is_a: BFO:0000020 ! specifically dependent continuant
+
+[Term]
 id: BFO:0000020
 name: specifically dependent continuant
 def: "A continuant that inheres in or is borne by other entities. Every instance of A requires some specific instance of B which must always be the same." []
@@ -51,6 +56,13 @@ is_a: BFO:0000040 ! material entity
 property_value: IAO:0000412 http://purl.obolibrary.org/obo/caro.owl
 
 [Term]
+id: CARO:0000014
+name: cell part
+is_a: CARO:0000003 ! anatomical structure
+property_value: IAO:0000412 http://purl.obolibrary.org/obo/caro.owl
+property_value: IAO:0000589 "cell part (CARO)" xsd:string
+
+[Term]
 id: CL:0000000
 name: cell
 is_a: CARO:0000003 ! anatomical structure
@@ -73,15 +85,68 @@ id: GO:0004872
 name: receptor activity
 
 [Term]
+id: GO:0005634
+name: nucleus
+is_a: GO:0044464 ! cell part
+property_value: IAO:0000412 http://purl.obolibrary.org/obo/go.owl
+
+[Term]
 id: GO:0008150
 name: biological_process
 is_a: BFO:0000015 ! process
+
+[Term]
+id: GO:0030424
+name: axon
+is_a: GO:0043005 ! neuron projection
+property_value: IAO:0000412 http://purl.obolibrary.org/obo/go.owl
+
+[Term]
+id: GO:0030425
+name: dendrite
+is_a: GO:0043005 ! neuron projection
+property_value: IAO:0000412 http://purl.obolibrary.org/obo/go.owl
+
+[Term]
+id: GO:0042995
+name: cell projection
+is_a: GO:0044464 ! cell part
+property_value: IAO:0000412 http://purl.obolibrary.org/obo/go.owl
+
+[Term]
+id: GO:0043005
+name: neuron projection
+is_a: GO:0042995 ! cell projection
+property_value: IAO:0000412 http://purl.obolibrary.org/obo/go.owl
+
+[Term]
+id: GO:0044464
+name: cell part
+is_a: CARO:0000014 ! cell part
+property_value: IAO:0000412 http://purl.obolibrary.org/obo/go.owl
+
+[Term]
+id: GO:0045202
+name: synapse
+is_a: CARO:0000014 ! cell part
+property_value: IAO:0000412 http://purl.obolibrary.org/obo/go.owl
 
 [Term]
 id: PATO:0000001
 name: quality
 is_a: BFO:0000020 ! specifically dependent continuant
 property_value: IAO:0000589 "quality (PATO)" xsd:string
+
+[Term]
+id: PATO:0000051
+name: morphology
+is_a: BFO:0000019 ! quality
+is_a: PATO:0001241 ! physical object quality
+
+[Term]
+id: PATO:0001241
+name: physical object quality
+is_a: PATO:0000001 ! quality
 
 [Typedef]
 id: BFO:0000050
