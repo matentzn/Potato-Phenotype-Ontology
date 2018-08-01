@@ -6,3 +6,4 @@ src/ontology/potpo.owl
 semantic.cache
 bin/
 .DS_Store
+*.ofn
